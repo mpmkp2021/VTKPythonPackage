@@ -16,7 +16,7 @@ install:
   - python -m pip install -U pip
   - sudo rm -rf /usr/local/cmake-3.16.8
   - sudo apt-get remove --purge cmake -y
-  - sudo apt-get install cmake -y
+  - sudo apt-get install cmake python3-dev -y
   - sudo apt-get install -y ninja-build
 
 script:
