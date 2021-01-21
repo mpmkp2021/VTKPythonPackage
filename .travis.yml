@@ -14,7 +14,7 @@ matrix:
         - docker
 install:
   - python -m pip install -U pip
-  - rm -rf /usr/local/cmake-3.16.8
+  - sudo rm -rf /usr/local/cmake-3.16.8
   - sudo apt-get remove --purge cmake -y
   - sudo apt-get install cmake -y
   - sudo apt-get install -y ninja-build
