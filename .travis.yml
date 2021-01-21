@@ -1,13 +1,20 @@
+language: python
+
 matrix:
   include:
     - name: linux-py36
-      language: python
       python: 3.6
+      os: linux
+      arch: arm64-graviton2
+      dist: focal
+      virt: vm
+      group: edge
       sudo: required
       services:
         - docker
 install:
   - python -m pip install -U pip
+  - sudo apt-get install -y ninja-build
 
 script:
   - mkdir build
